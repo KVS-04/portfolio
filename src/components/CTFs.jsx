@@ -1,23 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Github, ExternalLink } from 'lucide-react';
+import { Trophy, Flag, ShieldAlert } from 'lucide-react';
 
-const Projects = () => {
-  const projects = [
+const CTFs = () => {
+  const achievements = [
     {
-      title: 'Smart Network Guardian',
-      description: 'Custom SIEM dashboard with real-time packet sniffing (Scapy), anomaly detection, local-app attribution (psutil), and ransomware file integrity monitoring. Built with FastAPI and a dynamic web UI.',
-      type: 'Security Tool',
-      icon: <Activity size={24} />,
-      tags: ['Python', 'FastAPI', 'Scapy', 'Nmap', 'SIEM'],
-      github: '#',
-      link: '#'
+      title: 'AI Heist CTF',
+      description: 'Secured 1st place overall as a team in this highly competitive Capture The Flag event.',
+      type: '1st Place Team',
+      icon: <Trophy size={24} />,
+      tags: ['CTF', 'Web Exploitation', 'Forensics']
+    },
+    {
+      title: 'CryptNite CTF',
+      description: 'Qualified for the on-campus finals (among Top 60 teams nationwide) held at MIT Bengaluru.',
+      type: 'National Finalist',
+      icon: <Flag size={24} />,
+      tags: ['Cryptography', 'Reverse Engineering', 'CTF']
+    },
+    {
+      title: 'Active CTF & THM Practice',
+      description: 'Regularly practicing and solving challenges on TryHackMe (THM) and picoCTF to sharpen offensive security skills and master real-world vulnerabilities.',
+      type: 'Continuous Learning',
+      icon: <ShieldAlert size={24} />,
+      tags: ['TryHackMe', 'picoCTF', 'Boot2Root']
     }
-    // You can add more projects here in the future
   ];
 
   return (
-    <section id="projects" className="py-20 relative z-10">
+    <section id="ctfs" className="py-20 relative z-10">
       <motion.div 
         initial={{ opacity: 0, width: 0 }}
         whileInView={{ opacity: 1, width: '100%' }}
@@ -26,13 +37,13 @@ const Projects = () => {
         className="flex items-center gap-4 mb-12 overflow-hidden"
       >
         <h2 className="text-2xl md:text-4xl font-bold text-zinc-100 font-mono tracking-wider whitespace-nowrap">
-          <span className="text-accent">&gt;</span> Operations (Projects)
+          <span className="text-accent">&gt;</span> Achievements & CTFs
         </h2>
         <div className="h-[1px] flex-grow bg-gradient-to-r from-accent/30 to-transparent"></div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {achievements.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -49,18 +60,9 @@ const Projects = () => {
               <div className="p-3 bg-slate-800 rounded-md text-accent border border-slate-700">
                 {item.icon}
               </div>
-              <div className="flex gap-3">
-                {item.github !== '#' && (
-                  <a href={item.github} className="text-zinc-400 hover:text-accent transition-colors">
-                    <Github size={20} />
-                  </a>
-                )}
-                {item.link !== '#' && (
-                  <a href={item.link} className="text-zinc-400 hover:text-accent transition-colors">
-                    <ExternalLink size={20} />
-                  </a>
-                )}
-              </div>
+              <span className="text-xs font-mono font-bold text-accentLight bg-accent/10 px-3 py-1 rounded-full border border-accent/20">
+                {item.type}
+              </span>
             </div>
             
             <h3 className="text-xl font-bold font-mono text-zinc-100 mb-3 group-hover:text-accent transition-colors">
@@ -85,4 +87,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default CTFs;

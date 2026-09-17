@@ -15,7 +15,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Terminal', href: '#home' },
     { name: 'Arsenal', href: '#skills' },
-    { name: 'CTFs & Projects', href: '#projects' },
+    { name: 'Operations', href: '#projects' },
+    { name: 'Achievements', href: '#ctfs' },
     { name: 'Comms', href: '#contact' },
   ];
 
