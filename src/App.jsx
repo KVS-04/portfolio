@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -11,6 +12,9 @@ function App() {
   return (
     <div className="min-h-screen bg-darkBg text-slate-300 selection:bg-accent selection:text-white font-sans relative">
       
+      {/* Vercel Web Analytics */}
+      <Analytics />
+
       {/* Dynamic Interactive Background */}
       <Background />
 
