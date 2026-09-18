@@ -40,7 +40,7 @@ const Projects = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
             whileHover={{ y: -5, scale: 1.02 }}
-            className="group relative bg-cardBg/50 backdrop-blur-md border border-slate-700 p-8 rounded-lg overflow-hidden hover:border-accent/50 hover:shadow-[0_0_30px_rgba(167,139,250,0.15)] transition-all duration-300 flex flex-col"
+            className="group relative bg-cardBg/90 md:bg-cardBg/50 md:backdrop-blur-md border border-slate-700 p-8 rounded-lg overflow-hidden hover:border-accent/50 hover:shadow-[0_0_30px_rgba(167,139,250,0.15)] transition-all duration-300 flex flex-col"
           >
             {/* Top decorative line */}
             <div className="absolute top-0 left-0 w-full h-1 bg-zinc-800 group-hover:bg-accent transition-colors duration-300"></div>
