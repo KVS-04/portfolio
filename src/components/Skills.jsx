@@ -114,7 +114,7 @@ const Skills = () => {
                   viewport={{ once: true }}
                   transition={{ delay: skillIndex * 0.03, type: "spring" }}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="px-4 py-2 bg-zinc-900 md:bg-zinc-900/50 md:backdrop-blur-sm border border-zinc-800 text-zinc-300 rounded-md text-sm font-mono shadow-sm hover:border-accent/50 hover:text-accent hover:shadow-[0_0_10px_rgba(167,139,250,0.3)] transition-all cursor-default"
+                  className="px-4 py-2 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 text-zinc-300 rounded-md text-sm font-mono shadow-sm hover:border-accent/50 hover:text-accent hover:shadow-[0_0_10px_rgba(167,139,250,0.3)] transition-all cursor-default"
                 >
                   {skill}
                 </motion.span>
