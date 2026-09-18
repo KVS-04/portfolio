@@ -19,11 +19,11 @@ const CTFs = () => {
       tags: ['Cryptography', 'Reverse Engineering', 'CTF']
     },
     {
-      title: 'Active CTF & THM Practice',
-      description: 'Regularly practicing and solving challenges on TryHackMe (THM) and picoCTF to sharpen offensive security skills and master real-world vulnerabilities.',
+      title: 'Active Training & Labs',
+      description: 'Regularly solving challenges on TryHackMe, picoCTF, and PortSwigger Web Security Academy to master web vulnerabilities and real-world exploits.',
       type: 'Continuous Learning',
       icon: <ShieldAlert size={24} />,
-      tags: ['TryHackMe', 'picoCTF', 'Boot2Root']
+      tags: ['PortSwigger', 'TryHackMe', 'picoCTF']
     }
   ];
 

@@ -1,9 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Wrench, Code2, Monitor, Cloud } from 'lucide-react';
+import { Shield, Wrench, Code2, Monitor, Cloud, Bug } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
+    {
+      title: 'Vulnerabilities & Exploitation',
+      icon: <Bug size={20} />,
+      items: [
+        'XSS', 'SQL Injection', 'Path Traversal', 'Broken Access Control', 
+        'CSRF', 'Privilege Escalation', 'Reverse Shells', 'JWT Hijacking'
+      ]
+    },
     {
       title: 'Core Concepts',
       icon: <Shield size={20} />,
